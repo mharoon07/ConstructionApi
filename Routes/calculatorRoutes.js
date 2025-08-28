@@ -1,5 +1,5 @@
 import express from 'express';
-import { calculate } from '../Controllers/finishingCostController.js';
+import { calculate } from '../Controllers/FinishingCostController.js';
 // import * as greyStructureController from '../Controllers/greyStructureController.js';
 
 const router = express.Router();

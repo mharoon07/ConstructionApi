@@ -57,6 +57,7 @@ const dataModel = [
 
 export const calculate = (req, res) => {
     const { coveredArea, quality, note } = req.body;
+    console.log(coveredArea, quality, note);
 
     try {
         if (!coveredArea || isNaN(coveredArea) || coveredArea <= 0) {
