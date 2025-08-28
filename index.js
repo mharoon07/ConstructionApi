@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import calculatorRoutes from './routes/calculatorRoutes.js';
+import calculatorRoutes from './Routes/calculatorRoutes.js';
 
 dotenv.config();
 const app = express();
