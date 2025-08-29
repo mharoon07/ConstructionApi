@@ -7,7 +7,7 @@ const dataModel = [
             { name: "Aluminum Window (with glass)", rate_normal: 299, rate_superior: 367, type: "sqft", months: [0, 0, 20, 55, 25, 0, 0, 0], note_normal: "1.2 mm Aluminum with 5mm tempered glass", note_superior: "1.6 mm Aluminum with 5mm tempered glass" },
             { name: "Granite & Marble", rate_normal: 254, rate_superior: 355, type: "sqft", months: [0, 0, 5, 75, 20, 0, 0, 0], note_normal: "Granite upto 900/sq.ft; roof marble upto 80/sq.ft", note_superior: "Granite upto 900/sq.ft; roof marble upto 80/sq.ft" },
             { name: "False Ceiling", rate_normal: 68, rate_superior: 169, type: "sqft", months: [50, 50, 0, 0, 0, 0, 0, 0], note_normal: "Standard False Ceiling in Lounge only", note_superior: "Standard False Ceiling" },
-            { name: "Terrace Railing (Labour)", rate_normal: 47, rate_superior: 70, type: "sqft", months: [0, 45, 55, 0, 0, 0, 0, 0], note_normal: "As needed", note_superior: "As needed with SS" }
+            { name: "Terrace Railing ", rate_normal: 47, rate_superior: 70, type: "sqft", months: [0, 45, 55, 0, 0, 0, 0, 0], note_normal: "As needed", note_superior: "As needed with SS" }
         ]
     },
     {

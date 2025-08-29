@@ -108,14 +108,14 @@ const convert = (value, fromUnit) => {
 
     const conversions = conversionRates[fromUnit];
     return {
-        mm: Number((value * conversions.mm).toFixed(6)),
-        cm: Number((value * conversions.cm).toFixed(6)),
-        m: Number((value * conversions.m).toFixed(6)),
-        km: Number((value * conversions.km).toFixed(6)),
-        in: Number((value * conversions.in).toFixed(6)),
-        ft: Number((value * conversions.ft).toFixed(6)),
-        yd: Number((value * conversions.yd).toFixed(6)),
-        mi: Number((value * conversions.mi).toFixed(6)),
+        mm: Number((value * conversions.mm).toFixed(0)),
+        cm: Number((value * conversions.cm).toFixed(0)),
+        m: Number((value * conversions.m).toFixed(0)),
+        km: Number((value * conversions.km).toFixed(0)),
+        in: Number((value * conversions.in).toFixed(0)),
+        ft: Number((value * conversions.ft).toFixed(0)),
+        yd: Number((value * conversions.yd).toFixed(0)),
+        mi: Number((value * conversions.mi).toFixed(0)),
     };
 };
 

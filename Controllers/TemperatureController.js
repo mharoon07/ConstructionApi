@@ -25,9 +25,9 @@ const convertTheTemperature = (value, fromUnit) => {
     const celsius = tempToCelsius[fromUnit](value);
     return {
         C: Number(celsius.toFixed(2)),
-        F: Number((celsius * 9 / 5 + 32).toFixed(2)),
-        K: Number((celsius + 273.15).toFixed(2)),
-        R: Number(((celsius + 273.15) * 9 / 5).toFixed(2))
+        F: Number((celsius * 9 / 5 + 32).toFixed(0)),
+        K: Number((celsius + 273.15).toFixed(0)),
+        R: Number(((celsius + 273.15) * 9 / 5).toFixed(0))
     };
 };
 

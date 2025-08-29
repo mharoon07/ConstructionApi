@@ -29,12 +29,12 @@ const convertTheDensity = (value, fromUnit) => {
     }
     const valueInKgM3 = value * densityToKgM3[fromUnit];
     return {
-        kgm3: Number((valueInKgM3 / densityToKgM3.kgm3).toFixed(6)),
-        gcm3: Number((valueInKgM3 / densityToKgM3.gcm3).toFixed(6)),
-        gm3: Number((valueInKgM3 / densityToKgM3.gm3).toFixed(6)),
-        lbft3: Number((valueInKgM3 / densityToKgM3.lbft3).toFixed(6)),
-        lbgal: Number((valueInKgM3 / densityToKgM3.lbgal).toFixed(6)),
-        slugft3: Number((valueInKgM3 / densityToKgM3.slugft3).toFixed(6))
+        kgm3: Number((valueInKgM3 / densityToKgM3.kgm3).toFixed(0)),
+        gcm3: Number((valueInKgM3 / densityToKgM3.gcm3).toFixed(0)),
+        gm3: Number((valueInKgM3 / densityToKgM3.gm3).toFixed(0)),
+        lbft3: Number((valueInKgM3 / densityToKgM3.lbft3).toFixed(0)),
+        lbgal: Number((valueInKgM3 / densityToKgM3.lbgal).toFixed(0)),
+        slugft3: Number((valueInKgM3 / densityToKgM3.slugft3).toFixed(0))
     };
 };
 

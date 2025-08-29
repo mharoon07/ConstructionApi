@@ -45,10 +45,10 @@ const calculateRebarWeight = (mode, rebarSize, customDiameter, customUnit, lengt
     const totalWeight = weightKgPerFt * lengthFt;
 
     return {
-        diameterIn: Number(diaIn.toFixed(3)),
-        diameterMm: Number(diaMm.toFixed(1)),
-        weightPerFt: Number(weightKgPerFt.toFixed(3)),
-        totalWeight: Number(totalWeight.toFixed(2))
+        diameterIn: Number(diaIn.toFixed(0)),
+        diameterMm: Number(diaMm.toFixed(0)),
+        weightPerFt: Number(weightKgPerFt.toFixed(0)),
+        totalWeight: Number(totalWeight.toFixed(0))
     };
 };
 

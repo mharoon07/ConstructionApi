@@ -34,12 +34,12 @@ const convertTheForce = (value, fromUnit) => {
     const valueInN = value * forceToN[fromUnit];
     return {
         N: Number(valueInN.toFixed(6)),
-        kN: Number((valueInN / forceToN.kN).toFixed(6)),
-        dyn: Number((valueInN / forceToN.dyn).toFixed(6)),
-        gf: Number((valueInN / forceToN.gf).toFixed(6)),
-        kgf: Number((valueInN / forceToN.kgf).toFixed(6)),
-        lbf: Number((valueInN / forceToN.lbf).toFixed(6)),
-        kip: Number((valueInN / forceToN.kip).toFixed(6))
+        kN: Number((valueInN / forceToN.kN).toFixed(0)),
+        dyn: Number((valueInN / forceToN.dyn).toFixed(0)),
+        gf: Number((valueInN / forceToN.gf).toFixed(0)),
+        kgf: Number((valueInN / forceToN.kgf).toFixed(0)),
+        lbf: Number((valueInN / forceToN.lbf).toFixed(0)),
+        kip: Number((valueInN / forceToN.kip).toFixed(0))
     };
 };
 

@@ -42,21 +42,22 @@ const convertTheVolume = (value, fromUnit) => {
 
     const valueInM3 = value * volumeToM3[fromUnit];
     return {
-        mm3: Number((valueInM3 / volumeToM3.mm3).toFixed(6)),
-        cm3: Number((valueInM3 / volumeToM3.cm3).toFixed(6)),
-        ml: Number((valueInM3 / volumeToM3.ml).toFixed(6)),
-        l: Number((valueInM3 / volumeToM3.l).toFixed(6)),
-        m3: Number((valueInM3 / volumeToM3.m3).toFixed(6)),
-        in3: Number((valueInM3 / volumeToM3.in3).toFixed(6)),
-        ft3: Number((valueInM3 / volumeToM3.ft3).toFixed(6)),
-        yd3: Number((valueInM3 / volumeToM3.yd3).toFixed(6)),
-        gal: Number((valueInM3 / volumeToM3.gal).toFixed(6)),
-        qt: Number((valueInM3 / volumeToM3.qt).toFixed(6)),
+        mm3: Number((valueInM3 / volumeToM3.mm3).toFixed(0)),
+        cm3: Number((valueInM3 / volumeToM3.cm3).toFixed(0)),
+        ml: Number((valueInM3 / volumeToM3.ml).toFixed(0)),
+        l: Number((valueInM3 / volumeToM3.l).toFixed(0)),
+        m3: Number((valueInM3 / volumeToM3.m3).toFixed(0)),
+        in3: Number((valueInM3 / volumeToM3.in3).toFixed(0)),
+        ft3: Number((valueInM3 / volumeToM3.ft3).toFixed(0)),
+        yd3: Number((valueInM3 / volumeToM3.yd3).toFixed(0)),
+        gal: Number((valueInM3 / volumeToM3.gal).toFixed(0)),
+        qt: Number((valueInM3 / volumeToM3.qt).toFixed(0)),
     };
 };
 
 const convertVolume = (req, res) => {
     const { value, fromUnit } = req.body;
+    console.log({ value, fromUnit });
 
     try {
         if (!value || isNaN(value) || value <= 0) {
@@ -69,7 +70,7 @@ const convertVolume = (req, res) => {
         }
 
         const result = convertTheVolume(Number(value), fromUnit);
-
+console.log(result)
         res.json({
             input: { value: Number(value), unit: fromUnit },
             conversions: result,

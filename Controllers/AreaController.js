@@ -42,16 +42,16 @@ const convertTheArea = (value, fromUnit) => {
 
     const valueInM2 = value * areaToM2[fromUnit];
     return {
-        mm2: Number((valueInM2 / areaToM2.mm2).toFixed(6)),
-        cm2: Number((valueInM2 / areaToM2.cm2).toFixed(6)),
-        m2: Number((valueInM2 / areaToM2.m2).toFixed(6)),
-        ha: Number((valueInM2 / areaToM2.ha).toFixed(6)),
-        km2: Number((valueInM2 / areaToM2.km2).toFixed(6)),
-        in2: Number((valueInM2 / areaToM2.in2).toFixed(6)),
-        ft2: Number((valueInM2 / areaToM2.ft2).toFixed(6)),
-        yd2: Number((valueInM2 / areaToM2.yd2).toFixed(6)),
-        acre: Number((valueInM2 / areaToM2.acre).toFixed(6)),
-        mi2: Number((valueInM2 / areaToM2.mi2).toFixed(6))
+        mm2: Number((valueInM2 / areaToM2.mm2).toFixed(0)),
+        cm2: Number((valueInM2 / areaToM2.cm2).toFixed(0)),
+        m2: Number((valueInM2 / areaToM2.m2).toFixed(0)),
+        ha: Number((valueInM2 / areaToM2.ha).toFixed(0)),
+        km2: Number((valueInM2 / areaToM2.km2).toFixed(0)),
+        in2: Number((valueInM2 / areaToM2.in2).toFixed(0)),
+        ft2: Number((valueInM2 / areaToM2.ft2).toFixed(0)),
+        yd2: Number((valueInM2 / areaToM2.yd2).toFixed(0)),
+        acre: Number((valueInM2 / areaToM2.acre).toFixed(0)),
+        mi2: Number((valueInM2 / areaToM2.mi2).toFixed(0))
     };
 };
 

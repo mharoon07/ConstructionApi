@@ -29,10 +29,10 @@ const convertTheAngle = (value, fromUnit) => {
     const valueInDegrees = value * angleToDeg[fromUnit];
     return {
         deg: Number(valueInDegrees.toFixed(6)),
-        rad: Number((valueInDegrees / angleToDeg.rad).toFixed(6)),
-        grad: Number((valueInDegrees / angleToDeg.grad).toFixed(6)),
-        arcmin: Number((valueInDegrees / angleToDeg.arcmin).toFixed(6)),
-        arcsec: Number((valueInDegrees / angleToDeg.arcsec).toFixed(6))
+        rad: Number((valueInDegrees / angleToDeg.rad).toFixed(0)),
+        grad: Number((valueInDegrees / angleToDeg.grad).toFixed(0)),
+        arcmin: Number((valueInDegrees / angleToDeg.arcmin).toFixed(0)),
+        arcsec: Number((valueInDegrees / angleToDeg.arcsec).toFixed(0))
     };
 };
 

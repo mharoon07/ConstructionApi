@@ -35,7 +35,7 @@ const convertEnergy = (value, unit) => {
     for (const [targetUnit, factor] of Object.entries(conversionsToJoules)) {
         results[targetUnit] = {
             name: unitNames[targetUnit],
-            value: Number((valueInJoules / factor).toFixed(6))
+            value: Number((valueInJoules / factor).toFixed(0))
         };
     }
 
