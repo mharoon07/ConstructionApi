@@ -13,6 +13,9 @@ import { convertPowerEnergy } from "../Controllers/PowernEnergyController.js"
 import { calculateGreyStructureCost } from "../Controllers/calculateGreyStructureCost.js"
 import { calculateWoodVolume } from "../Controllers/woodVolumeCalculator.js"
 import { calculateDoorVolume } from "../Controllers/doorVolumeController.js"
+import { calculateDoorBeading } from "../Controllers/doorBeadingController.js"
+import { generateDoorBOQ } from "../Controllers/generateDoorBOQ.js"
+import { calculateMoistureContent } from "../Controllers/moistureContentController.js"
 
 const router = express.Router();
 
@@ -30,5 +33,8 @@ router.post('/power-energy/convert', convertPowerEnergy);
 router.post('/grey-structure/calculate', calculateGreyStructureCost);
 router.post('/wood-volume/calculate', calculateWoodVolume);
 router.post('/door-volume/calculate', calculateDoorVolume);
+router.post('/door-beading/calculate', calculateDoorBeading);
+router.post('/door-boq/calculate', generateDoorBOQ);
+router.post('/moisture-content/calculate', calculateMoistureContent);
 
 export default router;
