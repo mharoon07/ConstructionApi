@@ -23,6 +23,7 @@ import { calculateUndergroundTank } from "../Controllers/calculateUndergroundTan
 import { calculateRetainingWall } from "../Controllers/calculateRetainingWall.js"
 import { calculatePlinthLeanBeam } from "../Controllers/calculatePlinthLeanBeam.js"
 import { calculatePlinthBeam } from "../Controllers/calculatePlinthBeam.js"
+import { calculateRCCWaterTank } from "../Controllers/calculateRCCWaterTank.js"
 
 const router = express.Router();
 
@@ -50,5 +51,7 @@ router.post('/underground-tank/calculate', calculateUndergroundTank);
 router.post('/retaining-wall/calculate', calculateRetainingWall);
 router.post('/plinth-lean-beam/calculate', calculatePlinthLeanBeam);
 router.post('/plinth-beam/calculate', calculatePlinthBeam);
+router.post('/rcc-water-tank/calculate', calculateRCCWaterTank);
 
 export default router;
+ 
