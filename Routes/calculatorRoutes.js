@@ -24,6 +24,9 @@ import { calculateRetainingWall } from "../Controllers/calculateRetainingWall.js
 import { calculatePlinthLeanBeam } from "../Controllers/calculatePlinthLeanBeam.js"
 import { calculatePlinthBeam } from "../Controllers/calculatePlinthBeam.js"
 import { calculateRCCWaterTank } from "../Controllers/calculateRCCWaterTank.js"
+import { calculateSlabConcrete } from "../Controllers/calculateSlabConcrete.js"
+import { calculateLShapedStair } from "../Controllers/calculateLShapedStair.js"
+import { calculateUShapedStair } from "../Controllers/calculateUShapedStair.js"
 
 const router = express.Router();
 
@@ -52,6 +55,8 @@ router.post('/retaining-wall/calculate', calculateRetainingWall);
 router.post('/plinth-lean-beam/calculate', calculatePlinthLeanBeam);
 router.post('/plinth-beam/calculate', calculatePlinthBeam);
 router.post('/rcc-water-tank/calculate', calculateRCCWaterTank);
+router.post('/slab-concrete/calculate', calculateSlabConcrete);
+router.post('/l-shaped-stair/calculate', calculateLShapedStair);
+router.post('/u-shaped-stair/calculate', calculateUShapedStair);
 
 export default router;
- 
