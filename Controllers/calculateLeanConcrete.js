@@ -1,10 +1,10 @@
 const calculateLeanConcrete = (req, res) => {
   try {
-    const { length, width, thickness, ratio } = req.body;
+    const { length, width, thickness, mixRatio } = req.body;
 
     // Validate input fields
-    if (!length || !width || !thickness || !ratio) {
-      return res.status(400).json({ error: 'Invalid input: all fields (length, width, thickness, ratio) are required' });
+    if (!length || !width || !thickness || !mixRatio || !mixRatio.cement || !mixRatio.sand || !mixRatio.crush) {
+      return res.status(400).json({ error: 'Invalid input: all fields (length, width, thickness, cement, sand, crush) are required' });
     }
 
     // Parse feet and inches
@@ -26,12 +26,14 @@ const calculateLeanConcrete = (req, res) => {
     }
 
     // Parse concrete ratio
-    const parts = ratio.split(':').map(Number);
-    if (parts.length !== 3 || parts.some(isNaN)) {
-      return res.status(400).json({ error: 'Concrete ratio must be in the format 1:3:5' });
+    const cementPart = parseInt(mixRatio.cement);
+    const sandPart = parseInt(mixRatio.sand);
+    const crushPart = parseInt(mixRatio.crush);
+
+    if (isNaN(cementPart) || isNaN(sandPart) || isNaN(crushPart) || cementPart <= 0 || sandPart <= 0 || crushPart <= 0) {
+      return res.status(400).json({ error: 'Mix ratio values must be positive integers' });
     }
 
-    const [cementPart, sandPart, crushPart] = parts;
     const totalParts = cementPart + sandPart + crushPart;
 
     // Calculate volumes

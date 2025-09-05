@@ -27,6 +27,7 @@ import { calculateRCCWaterTank } from "../Controllers/calculateRCCWaterTank.js"
 import { calculateSlabConcrete } from "../Controllers/calculateSlabConcrete.js"
 import { calculateLShapedStair } from "../Controllers/calculateLShapedStair.js"
 import { calculateUShapedStair } from "../Controllers/calculateUShapedStair.js"
+import { calculateCuringWater } from "../Controllers/calculateCuringWater.js"
 
 const router = express.Router();
 
@@ -58,5 +59,6 @@ router.post('/rcc-water-tank/calculate', calculateRCCWaterTank);
 router.post('/slab-concrete/calculate', calculateSlabConcrete);
 router.post('/l-shaped-stair/calculate', calculateLShapedStair);
 router.post('/u-shaped-stair/calculate', calculateUShapedStair);
+router.post('/curing-water/calculate', calculateCuringWater);
 
 export default router;
